@@ -1,7 +1,6 @@
 const digitarNome = document.getElementById("seu-nome__input");
 const textoDoNome = document.getElementById("seu-nome__nome");
 const botaoDoNome = document.getElementById("seu-nome__botao");
-const tarefaInicial = document.getElementById("tarefa_inicial");
 const todasTarefas = document.getElementById("tarefas");
 const formulario = document.getElementById("formulario");
 const nomeDigitado = document.getElementById("nome__input");
@@ -14,17 +13,13 @@ var clicked = false;
 function inserirNome() {
     if (!clicked) {
         digitarNome.removeAttribute('hidden');
-        // botaoDoNome.removeAttribute('hidden');
     } else {
         textoDoNome.innerText = digitarNome.value;
         digitarNome.setAttribute('hidden', true);
-        // botaoDoNome.setAttribute('hidden',true);
         digitarNome.value = '';
     }
     clicked = !clicked;
 
-    // console.log("nomeVazio",textoDoNome.innerText == "");
-    // console.log("nomeNaoDigitado",textoDoNome.innerText == 'Clique no botão abaixo para digitar seu nome.');
     if ((textoDoNome.innerText == "") || (textoDoNome.innerText == 'Clique no botão abaixo para digitar seu nome.')) {
         botaoDoNome.innerText = 'Insira seu nome.';
     } else {
@@ -44,19 +39,7 @@ idadeDigitada.addEventListener('keydown', (event) => {
     }
 })
 
-function apagarTarefaInicial(tarefas) {
-    let quantidadeDeTarefas = tarefas.children.length;
-    if (quantidadeDeTarefas > 0) {
-        tarefaInicial.removeAttribute('hidden');
-    } else {
-        tarefaInicial.setAttribute('hidden', true);
-    }
-}
-
 function inserirDados() {
-    // linguagemDigitada.value = document.getElementById("linguagem").innerText.split(':')[1]
-    // cursoDigitado.value = document.getElementById("curso").innerText.split(':')[1]
-    // idadeDigitada.value = document.getElementById("idade").innerText.split(':')[1]
     formulario.removeAttribute('hidden');
 }
 
@@ -74,5 +57,3 @@ function confirmarFormulario() {
 function cancelarFormulario() {
     formulario.setAttribute('hidden', true);
 }
-
-apagarTarefaInicial(todasTarefas);
