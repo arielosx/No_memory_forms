@@ -1,2 +1,49 @@
 @import url("app.css");
 
+* {
+  font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  background-color: white;
+  color: black;
+  font-size: 50px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#texto_nome {
+  font-size: 25px;
+}
+
+button {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+button:hover {
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 20px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+input {
+  font-size: 15px;
+}
